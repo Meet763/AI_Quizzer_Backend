@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "d246f839-ba32-4e85-bc92-7d8f8f08547f",
+		"name": "Ai_quizzer_postman_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36331089"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZWZiNmVmOTY0NDkxM2QyYzYzOTRlYyIsInVzZXJuYW1lIjoibWFhbjIzIiwicGFzc3dvcmQiOiI0MzIxIiwiaWF0IjoxNzI2OTg1OTY3LCJleHAiOjE3MjcwMTU5Njd9._EXAignpOpr-aXpQ2Ivxr77HBP3xiXG__o_UExrqiSo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"dev patel\",\r\n    \"password\": \"@dev1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ai-quizzer-latest.onrender.com/user/signup",
+					"protocol": "http",
+					"host": [
+						"ai-quizzer-latest",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"meet\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ai-quizzer-latest.onrender.com/user/login",
+					"protocol": "http",
+					"host": [
+						"ai-quizzer-latest",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create quiz",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjAwZTY2ODVmY2UyY2I0ODg3OTllYyIsInVzZXJuYW1lIjoiZGV2IHBhdGVsIiwicGFzc3dvcmQiOiJAZGV2MSIsImlhdCI6MTcyNzAwODM1OCwiZXhwIjoxNzI3MDM4MzU4fQ.3BR4UrExpaRxmtE8N4k09KVPmZqpB2-_dbinZtgDWAI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"grade\": 5,\r\n    \"subject\": \"c++\",\r\n    \"totalQuestions\": 3,\r\n    \"maxScore\": 3,\r\n    \"difficulty\": \"easy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ai-quizzer-latest.onrender.com/quiz/create",
+					"protocol": "http",
+					"host": [
+						"ai-quizzer-latest",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"quiz",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "submit quiz",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjAwZTY2ODVmY2UyY2I0ODg3OTllYyIsInVzZXJuYW1lIjoiZGV2IHBhdGVsIiwicGFzc3dvcmQiOiJAZGV2MSIsImlhdCI6MTcyNzAwODM1OCwiZXhwIjoxNzI3MDM4MzU4fQ.3BR4UrExpaRxmtE8N4k09KVPmZqpB2-_dbinZtgDWAI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quizId\": \"66f00e8285fce2cb488799ee\",\r\n    \"responses\": [\r\n        {\r\n            \"questionId\": \"1\",\r\n            \"userResponse\": \"To include a header file that declares functions and variables\"\r\n        },\r\n        {\r\n            \"questionId\": \"2\",\r\n            \"userResponse\": \"The `int` data type is used for whole numbers, while the `float` data type is used for decimal numbers\"\r\n        },\r\n        {\r\n            \"questionId\": \"3\",\r\n            \"userResponse\": \"It is used to declare functions\"\r\n        }\r\n    ]\r\n} \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ai-quizzer-latest.onrender.com/quiz/submit",
+					"protocol": "http",
+					"host": [
+						"ai-quizzer-latest",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"quiz",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "quizhistory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjAwZTY2ODVmY2UyY2I0ODg3OTllYyIsInVzZXJuYW1lIjoiZGV2IHBhdGVsIiwicGFzc3dvcmQiOiJAZGV2MSIsImlhdCI6MTcyNzAwODM1OCwiZXhwIjoxNzI3MDM4MzU4fQ.3BR4UrExpaRxmtE8N4k09KVPmZqpB2-_dbinZtgDWAI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ai-quizzer-latest.onrender.com/quiz/quizhistory",
+					"protocol": "https",
+					"host": [
+						"ai-quizzer-latest",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"quiz",
+						"quizhistory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "quishistory/grade",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjAwZTY2ODVmY2UyY2I0ODg3OTllYyIsInVzZXJuYW1lIjoiZGV2IHBhdGVsIiwicGFzc3dvcmQiOiJAZGV2MSIsImlhdCI6MTcyNzAwODM1OCwiZXhwIjoxNzI3MDM4MzU4fQ.3BR4UrExpaRxmtE8N4k09KVPmZqpB2-_dbinZtgDWAI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ai-quizzer-latest.onrender.com/quiz/quizhistory/grade/5",
+					"protocol": "http",
+					"host": [
+						"ai-quizzer-latest",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"quiz",
+						"quizhistory",
+						"grade",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "quizhistory/subject",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjAwZTY2ODVmY2UyY2I0ODg3OTllYyIsInVzZXJuYW1lIjoiZGV2IHBhdGVsIiwicGFzc3dvcmQiOiJAZGV2MSIsImlhdCI6MTcyNzAwODM1OCwiZXhwIjoxNzI3MDM4MzU4fQ.3BR4UrExpaRxmtE8N4k09KVPmZqpB2-_dbinZtgDWAI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ai-quizzer-latest.onrender.com/quiz/quizhistory/subject/c++",
+					"protocol": "http",
+					"host": [
+						"ai-quizzer-latest",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"quiz",
+						"quizhistory",
+						"subject",
+						"c++"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "quizhistory/marks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjAwZTY2ODVmY2UyY2I0ODg3OTllYyIsInVzZXJuYW1lIjoiZGV2IHBhdGVsIiwicGFzc3dvcmQiOiJAZGV2MSIsImlhdCI6MTcyNzAwODM1OCwiZXhwIjoxNzI3MDM4MzU4fQ.3BR4UrExpaRxmtE8N4k09KVPmZqpB2-_dbinZtgDWAI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ai-quizzer-latest.onrender.com/quiz/quizhistory/marks/2",
+					"protocol": "http",
+					"host": [
+						"ai-quizzer-latest",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"quiz",
+						"quizhistory",
+						"marks",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "quizhistory/daterange",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjAwZTY2ODVmY2UyY2I0ODg3OTllYyIsInVzZXJuYW1lIjoiZGV2IHBhdGVsIiwicGFzc3dvcmQiOiJAZGV2MSIsImlhdCI6MTcyNzAwODM1OCwiZXhwIjoxNzI3MDM4MzU4fQ.3BR4UrExpaRxmtE8N4k09KVPmZqpB2-_dbinZtgDWAI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ai-quizzer-latest.onrender.com/quiz/quizhistory/daterange/2024-09-21/2024-09-22",
+					"protocol": "http",
+					"host": [
+						"ai-quizzer-latest",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"quiz",
+						"quizhistory",
+						"daterange",
+						"2024-09-21",
+						"2024-09-22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "quiz/retry",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjAwZTY2ODVmY2UyY2I0ODg3OTllYyIsInVzZXJuYW1lIjoiZGV2IHBhdGVsIiwicGFzc3dvcmQiOiJAZGV2MSIsImlhdCI6MTcyNzAwODM1OCwiZXhwIjoxNzI3MDM4MzU4fQ.3BR4UrExpaRxmtE8N4k09KVPmZqpB2-_dbinZtgDWAI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ai-quizzer-latest.onrender.com/quiz/retry/66f00e8285fce2cb488799ee",
+					"protocol": "http",
+					"host": [
+						"ai-quizzer-latest",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"quiz",
+						"retry",
+						"66f00e8285fce2cb488799ee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retry/submit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjAwZTY2ODVmY2UyY2I0ODg3OTllYyIsInVzZXJuYW1lIjoiZGV2IHBhdGVsIiwicGFzc3dvcmQiOiJAZGV2MSIsImlhdCI6MTcyNzAwODM1OCwiZXhwIjoxNzI3MDM4MzU4fQ.3BR4UrExpaRxmtE8N4k09KVPmZqpB2-_dbinZtgDWAI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quizId\": \"66f00e8285fce2cb488799ee\",\r\n    \"responses\": [\r\n        {\r\n            \"questionId\": \"1\",\r\n            \"userResponse\": \"To include a header file that declares functions and variables\"\r\n        },\r\n        {\r\n            \"questionId\": \"2\",\r\n            \"userResponse\": \"The `int` data type is used for whole numbers, while the `float` data type is used for decimal numbers\"\r\n        },\r\n        {\r\n            \"questionId\": \"3\",\r\n            \"userResponse\": \"It is the entry point of the program, where execution begins\"\r\n        }\r\n    ]\r\n} \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ai-quizzer-latest.onrender.com/quiz/retry/submit",
+					"protocol": "http",
+					"host": [
+						"ai-quizzer-latest",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"quiz",
+						"retry",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
